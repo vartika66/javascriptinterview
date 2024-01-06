@@ -40,4 +40,13 @@ const obj3 ={
     }
     
 }
-obj3.x.y();
+const obj4 = {
+    name:"haina",
+    x: function(){
+      const y = () =>{
+        console.log(this)
+      }
+
+    }
+}
+obj4.x().y();

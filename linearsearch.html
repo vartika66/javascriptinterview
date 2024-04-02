@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Linear search with javasript</title>
+    <script>
+      function searchEL() {
+        let data = [43, 34, 45, 42, 67, 9, 89];
+        let find = document.getElementById("el").value;
+        let pos;
+        for (let i = 0; i < data.length - 1; i++) {
+          if (data[i] == find) {
+            pos = i;
+            break;
+          }
+        }
+        console.log(pos);
+        if (!pos) {
+          alert("element not found");
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <input type="text" id="el" placeholder="enter element" />
+    <button onclick="searchEL()">search element</button>
+  </body>
+</html>

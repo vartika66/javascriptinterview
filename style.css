@@ -1,0 +1,22 @@
+#bulb{
+    height: 500px;
+    width: 500px;
+    background-color: red;
+    margin: auto;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+}
+.btn{
+    height: 70px;
+    width: 100px;
+   position: absolute;
+   align-items: center;
+   justify-content: center;
+   margin-left: 47%;
+   margin-top: 10px;
+   
+
+}

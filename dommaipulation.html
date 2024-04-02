@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        display: flex;
+        width: 100%;
+        height: 100vh;
+        margin: auto;
+
+        align-items: center;
+        justify-content: center;
+        background-color: aquamarine;
+      }
+      #card {
+        height: 400px;
+        width: 300px;
+        border-radius: 10px;
+        background-color: wheat;
+        padding: 30px;
+      }
+      #card img {
+        height: 200px;
+        width: 300px;
+
+        border-radius: 10px;
+        object-fit: cover;
+        object-position: center;
+      }
+      #card h1{
+        text-align: center;
+        margin-top:10px 0px;
+        font-family: 'Courier New', Courier, monospace;
+        font-weight: 500;
+      }
+      #card h5{
+        font-weight: 25px;
+        color: darkred;
+        align-items: center;
+        justify-content: center;
+        margin-left: 125px;
+      }
+      .btn-container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 10px;
+        gap: 5px;
+
+
+      }
+      .btn-container button{
+        padding: 5px;
+        border-radius: 5px;
+        border-style: none;
+       
+      }
+     
+      #add{
+        background-color: aqua;
+        color: black;
+        padding: 8px;
+         cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="card">
+      <img
+        src="https://images.unsplash.com/photo-1500917293891-ef795e70e1f6?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+      />
+      <h1>Model1</h1>
+      <h5>AMicable</h5>
+      <div class="btn-container">
+        
+        <button id="add">
+            Add Friend
+        </button>
+      </div>
+    </div>
+    <script>
+      var isstatus = document.querySelector('h5')
+      var addFriend = document.querySelector('#add');
+      var check =0;
+
+     addFriend.addEventListener('click',function(){
+      if(check ===0){
+         isstatus.innerHTML ="friends"
+      isstatus.style.color = 'green'
+      addFriend.innerHTML = "remove friend"
+      check =1;
+      }else{
+       isstatus.innerHTML ="stranger"
+      isstatus.style.color = 'red'
+      addFriend.innerHTML = "add friend"
+      check =0;
+      }
+    
+     })
+
+     
+    </script>
+  </body>
+</html>

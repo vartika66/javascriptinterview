@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/style.css" />
+    <link />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="bulb"></div>
+    <button class="btn">ON/OFF</button>
+    <script>
+      var btndiv = document.getElementById("bulb");
+      var flag = 0;
+
+      var buttonlight = document.querySelector(".btn");
+       buttonlight.addEventListener("click", function (e) {
+            if (flag === 0) {
+                btndiv.style.backgroundColor = "yellow";
+                flag = 1;
+            } else {
+                btndiv.style.backgroundColor = "transparent";
+                flag = 0;
+            }
+        });
+    </script>
+  </body>
+</html>

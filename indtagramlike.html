@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        background-color: aqua;
+        align-items: center;
+        justify-content: center;
+        margin: auto;
+      }
+
+      #conatiner {
+        height: 400px;
+        width: 300px;
+        border-radius: 10px;
+        background-color: wheat;
+        padding: 30px;
+        position: relative;
+        overflow: hidden;
+      }
+      #conatiner img {
+        object-fit: contain;
+        height: 100%;
+        width: 100%;
+      }
+      #conatiner i {
+        color: #fff;
+        font-size: 70px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(0);
+        opacity: 0.8;
+        transition: ease-in-out 3s;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="conatiner">
+      <img
+        src="https://media.istockphoto.com/id/1270652087/photo/beautiful-woman-with-voluminous-curly-hairstyle.jpg?s=612x612&w=is&k=20&c=AkLpoqs693IZnJQuh2Fb3Otu5Qt48lNlOB82xz-hpuo="
+      />
+      <i class="ri-heart-fill"></i>
+    </div>
+    <script>
+      var con = document.querySelector("#conatiner");
+      var love = document.querySelector("i")
+      con.addEventListener("dblclick", function(){
+        love.style.transform = "translate(-50%,-50%) scale(1)";
+        setTimeout(function(){
+            love.style.transform = "translate(-50%,-50%) scale(0)"
+        },2000)
+      });
+
+
+    </script>
+  </body>
+</html>
